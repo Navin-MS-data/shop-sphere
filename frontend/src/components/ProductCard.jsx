@@ -1,13 +1,17 @@
 import toast from "react-hot-toast";
-import { ShoppingCart, Eye } from "lucide-react";
+import { ShoppingCart, Eye, Heart } from "lucide-react";
 import { useUserStore } from "../stores/useUserStore";
 import { useCartStore } from "../stores/useCartStore";
+import { useWishlistStore } from "../stores/useWishlistStore";
 import { useNavigate } from "react-router-dom";
 
 const ProductCard = ({ product }) => {
   const { user } = useUserStore();
   const { addToCart } = useCartStore();
+  const { addToWishlist, removeFromWishlist, isInWishlist } = useWishlistStore();
   const navigate = useNavigate();
+
+  const inWishlist = isInWishlist(product._id);
 
   const handleAddToCart = () => {
     if (!user) {
@@ -19,6 +23,19 @@ const ProductCard = ({ product }) => {
     }
   };
 
+  const handleWishlistToggle = (e) => {
+    e.stopPropagation();
+    if (!user) {
+      toast.error("Please login to add products to wishlist", { id: "login" });
+      return;
+    }
+    if (inWishlist) {
+      removeFromWishlist(product._id);
+    } else {
+      addToWishlist(product);
+    }
+  };
+
   return (
     <div className="flex w-full relative flex-col overflow-hidden rounded-lg border border-grey-300 shadow-md bg-white hover:shadow-lg transition-shadow duration-300">
       <div
@@ -27,6 +44,17 @@ const ProductCard = ({ product }) => {
       >
         <img className="object-cover w-full" src={product.image} alt="product image" />
         <div className="absolute inset-0 bg-black bg-opacity-5 hover:bg-opacity-10 transition-all duration-200" />
+        <button
+          onClick={handleWishlistToggle}
+          className="absolute top-2 right-2 bg-white p-2 rounded-full shadow-lg hover:scale-110 transition-all duration-200 z-10"
+          title={inWishlist ? "Remove from wishlist" : "Add to wishlist"}
+        >
+          <Heart
+            size={20}
+            className={inWishlist ? "text-red-500" : "text-grey-400"}
+            fill={inWishlist ? "currentColor" : "none"}
+          />
+        </button>
       </div>
 
       <div className="mt-4 px-5 pb-5">
