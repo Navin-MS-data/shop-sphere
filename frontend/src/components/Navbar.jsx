@@ -11,7 +11,7 @@ const Navbar = () => {
   const { wishlist } = useWishlistStore();
 
   return (
-    <header className="fixed top-0 left-0 w-full bg-white/10 backdrop-blur-lg shadow-sm z-40 transition-all duration-300 border-b border-white/20">
+    <header className="fixed top-0 left-0 w-full bg-white/10 backdrop-blur-lg z-50 transition-all duration-300">
       <div className="container mx-auto px-4 py-3">
         <div className="flex flex-wrap justify-between items-center">
           <Link to="/" className="text-2xl font-bold text-black items-center flex gap-2">

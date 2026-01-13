@@ -7,6 +7,7 @@ import AdminPage from "./pages/AdminPage";
 import CategoryPage from "./pages/CategoryPage";
 import ProductPage from "./pages/ProductPage";
 import WishlistPage from "./pages/WishlistPage";
+import AboutPage from "./pages/AboutPage";
 
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -46,27 +47,117 @@ function App() {
         </div>
       </div>
 
-      <div className="relative z-50 pt-20">
+      <div className="relative z-50">
         <Navbar />
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/signup" element={!user ? <SignUpPage /> : <Navigate to="/" />} />
-          <Route path="/login" element={!user ? <LoginPage /> : <Navigate to="/" />} />
+          <Route
+            path="/signup"
+            element={
+              !user ? (
+                <div className="pt-20">
+                  <SignUpPage />
+                </div>
+              ) : (
+                <Navigate to="/" />
+              )
+            }
+          />
+          <Route
+            path="/login"
+            element={
+              !user ? (
+                <div className="pt-20">
+                  <LoginPage />
+                </div>
+              ) : (
+                <Navigate to="/" />
+              )
+            }
+          />
           <Route
             path="/secret-dashboard"
-            element={user?.role === "admin" ? <AdminPage /> : <Navigate to="/login" />}
+            element={
+              user?.role === "admin" ? (
+                <div className="pt-20">
+                  <AdminPage />
+                </div>
+              ) : (
+                <Navigate to="/login" />
+              )
+            }
           />
-          <Route path="/category/:category" element={<CategoryPage />} />
-          <Route path="/product/:id" element={<ProductPage />} />
-          <Route path="/cart" element={user ? <CartPage /> : <Navigate to="/login" />} />
-          <Route path="/wishlist" element={user ? <WishlistPage /> : <Navigate to="/login" />} />
+          <Route
+            path="/about"
+            element={
+              <div className="pt-20">
+                <AboutPage />
+              </div>
+            }
+          />
+          <Route
+            path="/category/:category"
+            element={
+              <div className="pt-20">
+                <CategoryPage />
+              </div>
+            }
+          />
+          <Route
+            path="/product/:id"
+            element={
+              <div className="pt-20">
+                <ProductPage />
+              </div>
+            }
+          />
+          <Route
+            path="/cart"
+            element={
+              user ? (
+                <div className="pt-20">
+                  <CartPage />
+                </div>
+              ) : (
+                <Navigate to="/login" />
+              )
+            }
+          />
+          <Route
+            path="/wishlist"
+            element={
+              user ? (
+                <div className="pt-20">
+                  <WishlistPage />
+                </div>
+              ) : (
+                <Navigate to="/login" />
+              )
+            }
+          />
           <Route
             path="/purchase-success"
-            element={user ? <PurchaseSuccessPage /> : <Navigate to="/login" />}
+            element={
+              user ? (
+                <div className="pt-20">
+                  <PurchaseSuccessPage />
+                </div>
+              ) : (
+                <Navigate to="/login" />
+              )
+            }
           />
           <Route
             path="/purchase-cancel"
-            element={user ? <PurchaseCancelPage /> : <Navigate to="/login" />}
+            element={
+              user ? (
+                <div className="pt-20">
+                  <PurchaseCancelPage />
+                </div>
+              ) : (
+                <Navigate to="/login" />
+              )
+            }
           />
         </Routes>
         <Footer />

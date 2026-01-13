@@ -71,13 +71,13 @@ const HeroCarousel = () => {
   };
 
   return (
-    <div className="relative w-full h-[500px] md:h-[600px] overflow-hidden rounded-2xl shadow-2xl mb-16">
+    <div className="relative w-full h-[400px] md:h-[500px] overflow-hidden">
       {/* Slides */}
       {slides.map((slide, index) => (
         <div
           key={slide.id}
           className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
-            index === currentSlide ? "opacity-100" : "opacity-0"
+            index === currentSlide ? "opacity-100 z-10" : "opacity-0 pointer-events-none"
           }`}
         >
           {/* Background Image */}
@@ -85,11 +85,13 @@ const HeroCarousel = () => {
             <img
               src={slide.image}
               alt={slide.title}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover blur-sm"
             />
             {/* Overlay Gradient */}
-            <div className={`absolute inset-0 bg-gradient-to-r ${slide.bgColor} backdrop-blur-[2px]`} />
-            <div className="absolute inset-0 bg-black/30" />
+            <div
+              className={`absolute inset-0 bg-gradient-to-r ${slide.bgColor} backdrop-blur-md`}
+            />
+            <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" />
           </div>
 
           {/* Content */}
@@ -120,7 +122,7 @@ const HeroCarousel = () => {
       {/* Navigation Arrows */}
       <button
         onClick={prevSlide}
-        className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/20 backdrop-blur-md
+        className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/20
                    hover:bg-white/40 text-white p-3 rounded-full transition-all duration-300
                    shadow-lg hover:shadow-xl z-10 group"
         aria-label="Previous slide"
@@ -129,7 +131,7 @@ const HeroCarousel = () => {
       </button>
       <button
         onClick={nextSlide}
-        className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/20 backdrop-blur-md
+        className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/20
                    hover:bg-white/40 text-white p-3 rounded-full transition-all duration-300
                    shadow-lg hover:shadow-xl z-10 group"
         aria-label="Next slide"
@@ -144,9 +146,7 @@ const HeroCarousel = () => {
             key={index}
             onClick={() => goToSlide(index)}
             className={`transition-all duration-300 rounded-full ${
-              index === currentSlide
-                ? "w-12 h-3 bg-white"
-                : "w-3 h-3 bg-white/50 hover:bg-white/75"
+              index === currentSlide ? "w-12 h-3 bg-white" : "w-3 h-3 bg-white/50 hover:bg-white/75"
             }`}
             aria-label={`Go to slide ${index + 1}`}
           />
