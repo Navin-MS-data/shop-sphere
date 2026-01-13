@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useWishlistStore } from "../stores/useWishlistStore";
 import { useCartStore } from "../stores/useCartStore";
-import { Trash2, ShoppingCart, Heart } from "lucide-react";
+import { Trash2, ShoppingCart } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import LoadingSpinner from "../components/LoadingSpinner";
 
@@ -30,13 +30,11 @@ const WishlistPage = () => {
     <div className="min-h-screen bg-white py-8 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="flex items-center gap-3 mb-8">
-          <Heart className="text-red-500" size={32} fill="currentColor" />
           <h1 className="text-4xl font-bold text-black">My Wishlist</h1>
         </div>
 
         {wishlist.length === 0 ? (
           <div className="text-center py-16">
-            <Heart className="mx-auto text-grey-400 mb-4" size={64} />
             <h2 className="text-2xl font-semibold text-grey-700 mb-2">Your wishlist is empty</h2>
             <p className="text-grey-600 mb-6">
               Start adding your favorite products to your wishlist!
@@ -89,9 +87,7 @@ const WishlistPage = () => {
                   </p>
                   <div className="flex items-center justify-between mb-4">
                     <span className="text-2xl font-bold text-black">${product.price}</span>
-                    <span className="text-sm text-grey-500 capitalize">
-                      {product.category}
-                    </span>
+                    <span className="text-sm text-grey-500 capitalize">{product.category}</span>
                   </div>
 
                   <div className="flex gap-2">

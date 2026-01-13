@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import CategoryItem from "../components/CategoryItem";
 import { useProductStore } from "../stores/useProductStore";
 import FeaturedProducts from "../components/FeaturedProducts";
+import HeroCarousel from "../components/HeroCarousel";
 
 const categories = [
   { href: "/jeans", name: "Jeans", imageUrl: "/jeans.jpg" },
@@ -23,6 +24,8 @@ const HomePage = () => {
   return (
     <div className="relative min-h-screen text-black overflow-hidden">
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <HeroCarousel />
+
         <h1 className="text-center text-5xl sm:text-6xl font-bold text-black mb-4">
           Explore Our Categories
         </h1>

@@ -1,4 +1,4 @@
-import { ShoppingCart, LogIn, LogOut, Lock, Heart } from "lucide-react";
+import { ShoppingCart, LogIn, LogOut, Lock, Heart, Home } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useUserStore } from "../stores/useUserStore";
 import { useCartStore } from "../stores/useCartStore";
@@ -23,21 +23,22 @@ const Navbar = () => {
             <Link
               to={"/"}
               className="text-black hover:text-grey-700 transition duration-300 ease-in-out"
+              title="Home"
             >
-              Home
+              <Home className="inline-block group-hover:text-grey-700" size={20} />
             </Link>
             {user && (
               <>
                 <Link
                   to={"/wishlist"}
                   className="relative group text-black hover:text-grey-700 transition duration-300 ease-in-out"
+                  title="Wishlist"
                 >
-                  <Heart className="inline-block mr-1 group-hover:text-grey-700" size={20} />
-                  <span className="hidden sm:inline">Wishlist</span>
+                  <Heart className="inline-block group-hover:text-grey-700" size={20} />
                   {wishlist.length > 0 && (
                     <span
-                      className="absolute -top-2 -left-2 bg-red-500 text-white rounded-full px-2 py-0.5
-										text-xs group-hover:bg-red-600 transition duration-300 ease-in-out"
+                      className="absolute -top-2 -left-2 bg-black text-white rounded-full px-2 py-0.5
+										text-xs group-hover:bg-grey-800 transition duration-300 ease-in-out"
                     >
                       {wishlist.length}
                     </span>
@@ -46,9 +47,9 @@ const Navbar = () => {
                 <Link
                   to={"/cart"}
                   className="relative group text-black hover:text-grey-700 transition duration-300 ease-in-out"
+                  title="Cart"
                 >
-                  <ShoppingCart className="inline-block mr-1 group-hover:text-grey-700" size={20} />
-                  <span className="hidden sm:inline">Cart</span>
+                  <ShoppingCart className="inline-block group-hover:text-grey-700" size={20} />
                   {cart.length > 0 && (
                     <span
                       className="absolute -top-2 -left-2 bg-black text-white rounded-full px-2 py-0.5

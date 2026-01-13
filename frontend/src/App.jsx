@@ -9,6 +9,7 @@ import ProductPage from "./pages/ProductPage";
 import WishlistPage from "./pages/WishlistPage";
 
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 import { Toaster } from "react-hot-toast";
 import { useUserStore } from "./stores/useUserStore";
 import { useEffect } from "react";
@@ -68,6 +69,7 @@ function App() {
             element={user ? <PurchaseCancelPage /> : <Navigate to="/login" />}
           />
         </Routes>
+        <Footer />
       </div>
       <Toaster />
     </div>
