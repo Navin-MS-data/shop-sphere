@@ -11,7 +11,7 @@ import toast from "react-hot-toast";
 const ProductPage = () => {
   const { id } = useParams();
   const navigate = useNavigate();
-  const { products, fetchAllProducts } = useProductStore();
+  const { products, featuredProducts, fetchAllProducts } = useProductStore();
   const { addToCart } = useCartStore();
   const { user } = useUserStore();
 
@@ -22,16 +22,28 @@ const ProductPage = () => {
 
   useEffect(() => {
     const loadProduct = async () => {
-      if (products.length === 0) {
-        await fetchAllProducts();
+      // First, try to find the product in the products array
+      let foundProduct = products.find((p) => p._id === id);
+
+      // If not found in products, check featuredProducts
+      if (!foundProduct && featuredProducts.length > 0) {
+        foundProduct = featuredProducts.find((p) => p._id === id);
       }
-      const foundProduct = products.find((p) => p._id === id);
+
+      // If still not found and products array is empty, fetch all products and try again
+      if (!foundProduct && products.length === 0) {
+        await fetchAllProducts();
+        // After fetching, we need to wait for the next render cycle to get updated products
+        // The useEffect will re-run when products changes
+        return;
+      }
+
       setProduct(foundProduct);
       setLoading(false);
     };
 
     loadProduct();
-  }, [id, products, fetchAllProducts]);
+  }, [id, products, featuredProducts, fetchAllProducts]);
 
   const handleQuantityChange = (type) => {
     if (type === "increase") {
