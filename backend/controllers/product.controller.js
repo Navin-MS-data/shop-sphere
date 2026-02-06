@@ -141,7 +141,12 @@ export const toggleFeaturedProduct = async (req, res) => {
     if (product) {
       product.isFeatured = !product.isFeatured;
       const updatedProduct = await product.save();
+      console.log(`Product ${product.name} featured status changed to: ${product.isFeatured}`);
+
+      // Wait for cache update to complete before responding
       await updateFeaturedProductsCache();
+      console.log("Cache update completed, sending response");
+
       res.json(updatedProduct);
     } else {
       res.status(404).json({ message: "Product not found" });
@@ -156,9 +161,15 @@ async function updateFeaturedProductsCache() {
   try {
     // The lean() method  is used to return plain JavaScript objects instead of full Mongoose documents. This can significantly improve performance
 
+    // Clear the old cache first
+    await redis.del("featured_products");
+    console.log("Old cache cleared");
+
     const featuredProducts = await Product.find({ isFeatured: true }).lean();
+    console.log(`Updating Redis cache with ${featuredProducts.length} featured products`);
     await redis.set("featured_products", JSON.stringify(featuredProducts));
+    console.log("✅ Redis cache updated successfully");
   } catch (error) {
-    console.log("error in update cache function");
+    console.log("❌ Error in update cache function:", error.message);
   }
 }
