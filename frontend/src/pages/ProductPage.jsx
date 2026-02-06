@@ -5,6 +5,7 @@ import { ShoppingCart, Minus, Plus, ArrowLeft, Package, Truck, ShieldCheck } fro
 import { useProductStore } from "../stores/useProductStore";
 import { useCartStore } from "../stores/useCartStore";
 import { useUserStore } from "../stores/useUserStore";
+import SizeSelector from "../components/SizeSelector";
 import toast from "react-hot-toast";
 
 const ProductPage = () => {
@@ -16,6 +17,7 @@ const ProductPage = () => {
 
   const [product, setProduct] = useState(null);
   const [quantity, setQuantity] = useState(1);
+  const [selectedSize, setSelectedSize] = useState("");
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -174,6 +176,9 @@ const ProductPage = () => {
                   "Discover this premium product from our collection. Crafted with attention to detail and quality materials, this item is designed to exceed your expectations. Perfect for everyday use or special occasions."}
               </p>
             </div>
+
+            {/* Size Selector */}
+            <SizeSelector selectedSize={selectedSize} onSizeChange={setSelectedSize} />
 
             {/* Quantity Selector */}
             <div className="mb-6">

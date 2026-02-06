@@ -1,14 +1,10 @@
 import { useEffect, useState } from "react";
-import { ShoppingCart, ChevronLeft, ChevronRight } from "lucide-react";
-import { useCartStore } from "../stores/useCartStore";
-import { useNavigate } from "react-router-dom";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import ProductCard from "./ProductCard";
 
 const FeaturedProducts = ({ featuredProducts }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [itemsPerPage, setItemsPerPage] = useState(4);
-
-  const { addToCart } = useCartStore();
-  const navigate = useNavigate();
 
   useEffect(() => {
     const handleResize = () => {
@@ -51,35 +47,7 @@ const FeaturedProducts = ({ featuredProducts }) => {
                   key={product._id}
                   className="w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 flex-shrink-0 px-2"
                 >
-                  <div className="bg-white rounded-lg shadow-md overflow-hidden h-full transition-all duration-300 hover:shadow-lg border border-grey-200">
-                    <div
-                      className="overflow-hidden cursor-pointer"
-                      onClick={() => navigate(`/product/${product._id}`)}
-                    >
-                      <img
-                        src={product.image}
-                        alt={product.name}
-                        className="w-full h-48 object-cover transition-transform duration-300 ease-in-out hover:scale-110"
-                      />
-                    </div>
-                    <div className="p-4">
-                      <h3
-                        className="text-lg font-semibold mb-2 text-grey-900 cursor-pointer hover:text-primary transition-colors duration-200"
-                        onClick={() => navigate(`/product/${product._id}`)}
-                      >
-                        {product.name}
-                      </h3>
-                      <p className="text-grey-900 font-medium mb-4">${product.price.toFixed(2)}</p>
-                      <button
-                        onClick={() => addToCart(product)}
-                        className="w-full bg-primary hover:bg-primary-dark text-white font-semibold py-2 px-4 rounded transition-all duration-300
-												flex items-center justify-center shadow-md hover:shadow-lg"
-                      >
-                        <ShoppingCart className="w-5 h-5 mr-2" />
-                        Add to Cart
-                      </button>
-                    </div>
-                  </div>
+                  <ProductCard product={product} />
                 </div>
               ))}
             </div>

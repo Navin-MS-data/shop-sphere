@@ -29,7 +29,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-grey-900 text-white mt-auto">
+    <footer className="bg-black text-white mt-auto">
       <div className="max-w-7xl mx-auto px-4 py-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {/* Company Info */}
@@ -38,7 +38,7 @@ const Footer = () => {
               <img src="/shop-sphere-icon.svg" alt="Shop Sphere Logo" className="w-7 h-7" />
               <h3 className="text-lg font-bold">Shop Sphere</h3>
             </div>
-            <p className="text-grey-400 mb-3 text-xs leading-relaxed">
+            <p className="text-grey-400 mb-3 text-sm leading-relaxed">
               Your premier destination for eco-friendly fashion. Discover the latest trends in
               sustainable style.
             </p>
@@ -84,12 +84,12 @@ const Footer = () => {
 
           {/* Shop Categories */}
           <div>
-            <h3 className="text-base font-semibold mb-3">Shop</h3>
+            <h3 className="text-lg font-semibold mb-3">Shop</h3>
             <ul className="space-y-1.5">
               <li>
                 <Link
                   to="/category/jeans"
-                  className="text-grey-400 hover:text-white transition-colors duration-200 text-xs"
+                  className="text-grey-400 hover:text-white transition-colors duration-200 text-sm"
                 >
                   Jeans
                 </Link>
@@ -97,7 +97,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/category/t-shirts"
-                  className="text-grey-400 hover:text-white transition-colors duration-200 text-xs"
+                  className="text-grey-400 hover:text-white transition-colors duration-200 text-sm"
                 >
                   T-Shirts
                 </Link>
@@ -105,7 +105,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/category/shoes"
-                  className="text-grey-400 hover:text-white transition-colors duration-200 text-xs"
+                  className="text-grey-400 hover:text-white transition-colors duration-200 text-sm"
                 >
                   Shoes
                 </Link>
@@ -113,7 +113,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/category/jackets"
-                  className="text-grey-400 hover:text-white transition-colors duration-200 text-xs"
+                  className="text-grey-400 hover:text-white transition-colors duration-200 text-sm"
                 >
                   Jackets
                 </Link>
@@ -121,7 +121,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/category/bags"
-                  className="text-grey-400 hover:text-white transition-colors duration-200 text-xs"
+                  className="text-grey-400 hover:text-white transition-colors duration-200 text-sm"
                 >
                   Bags
                 </Link>
@@ -129,7 +129,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/category/glasses"
-                  className="text-grey-400 hover:text-white transition-colors duration-200 text-xs"
+                  className="text-grey-400 hover:text-white transition-colors duration-200 text-sm"
                 >
                   Glasses
                 </Link>
@@ -137,7 +137,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/category/suits"
-                  className="text-grey-400 hover:text-white transition-colors duration-200 text-xs"
+                  className="text-grey-400 hover:text-white transition-colors duration-200 text-sm"
                 >
                   Suits
                 </Link>
@@ -147,12 +147,12 @@ const Footer = () => {
 
           {/* Customer Service */}
           <div>
-            <h3 className="text-base font-semibold mb-3">Customer Service</h3>
+            <h3 className="text-lg font-semibold mb-3">Customer Service</h3>
             <ul className="space-y-1.5">
               <li>
                 <Link
                   to="/"
-                  className="text-grey-400 hover:text-white transition-colors duration-200 text-xs"
+                  className="text-grey-400 hover:text-white transition-colors duration-200 text-sm"
                 >
                   Home
                 </Link>
@@ -160,7 +160,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/cart"
-                  className="text-grey-400 hover:text-white transition-colors duration-200 text-xs"
+                  className="text-grey-400 hover:text-white transition-colors duration-200 text-sm"
                 >
                   Shopping Cart
                 </Link>
@@ -168,7 +168,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/wishlist"
-                  className="text-grey-400 hover:text-white transition-colors duration-200 text-xs"
+                  className="text-grey-400 hover:text-white transition-colors duration-200 text-sm"
                 >
                   Wishlist
                 </Link>
@@ -176,7 +176,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/about"
-                  className="text-grey-400 hover:text-white transition-colors duration-200 text-xs"
+                  className="text-grey-400 hover:text-white transition-colors duration-200 text-sm"
                 >
                   About Us
                 </Link>
@@ -185,7 +185,7 @@ const Footer = () => {
               <li>
                 <a
                   href="#"
-                  className="text-grey-400 hover:text-white transition-colors duration-200 text-xs"
+                  className="text-grey-400 hover:text-white transition-colors duration-200 text-sm"
                 >
                   Returns & Exchange
                 </a>
@@ -193,7 +193,7 @@ const Footer = () => {
               <li>
                 <a
                   href="#"
-                  className="text-grey-400 hover:text-white transition-colors duration-200 text-xs"
+                  className="text-grey-400 hover:text-white transition-colors duration-200 text-sm"
                 >
                   FAQs
                 </a>
@@ -203,13 +203,13 @@ const Footer = () => {
 
           {/* Contact & Stores */}
           <div>
-            <h3 className="text-base font-semibold mb-3">Get In Touch</h3>
+            <h3 className="text-lg font-semibold mb-3">Get In Touch</h3>
             <ul className="space-y-2 mb-4">
-              <li className="flex items-start gap-2 text-grey-400 text-xs">
+              <li className="flex items-start gap-2 text-grey-400 text-sm">
                 <MapPin size={16} className="flex-shrink-0 mt-0.5" />
                 <span>123 Fashion Street, Style City, SC 12345</span>
               </li>
-              <li className="flex items-center gap-2 text-grey-400 text-xs">
+              <li className="flex items-center gap-2 text-grey-400 text-sm">
                 <Phone size={16} className="flex-shrink-0" />
                 <a
                   href="tel:+1234567890"
@@ -218,7 +218,7 @@ const Footer = () => {
                   +1 (234) 567-890
                 </a>
               </li>
-              <li className="flex items-center gap-2 text-grey-400 text-xs">
+              <li className="flex items-center gap-2 text-grey-400 text-sm">
                 <Mail size={16} className="flex-shrink-0" />
                 <a
                   href="mailto:info@shopsphere.com"
@@ -230,10 +230,10 @@ const Footer = () => {
             </ul>
 
             <div className="mt-4">
-              <h4 className="text-xs font-semibold mb-2">Our Stores</h4>
+              <h4 className="text-sm font-semibold mb-2">Our Stores</h4>
               <div className="grid grid-cols-2 gap-x-4 gap-y-2">
                 {stores.map((store, index) => (
-                  <span key={index} className="text-grey-400 text-[10px]">
+                  <span key={index} className="text-grey-400 text-xs">
                     • {store}
                   </span>
                 ))}
@@ -245,10 +245,10 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-grey-800 mt-6 pt-4">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-grey-400 text-xs text-center md:text-left">
+            <p className="text-grey-400 text-sm text-center md:text-left">
               © {currentYear} Shop Sphere. All rights reserved.
             </p>
-            <div className="flex flex-wrap justify-center gap-4 text-xs">
+            <div className="flex flex-wrap justify-center gap-4 text-sm">
               <a href="#" className="text-grey-400 hover:text-white transition-colors duration-200">
                 Privacy Policy
               </a>

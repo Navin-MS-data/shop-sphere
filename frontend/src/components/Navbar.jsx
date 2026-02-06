@@ -2,13 +2,11 @@ import { ShoppingCart, LogIn, LogOut, Lock, Heart, Home } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useUserStore } from "../stores/useUserStore";
 import { useCartStore } from "../stores/useCartStore";
-import { useWishlistStore } from "../stores/useWishlistStore";
 
 const Navbar = () => {
   const { user, logout } = useUserStore();
   const isAdmin = user?.role === "admin";
   const { cart } = useCartStore();
-  const { wishlist } = useWishlistStore();
 
   return (
     <header className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-2rem)] max-w-6xl">
@@ -33,12 +31,7 @@ const Navbar = () => {
 
           {user && (
             <>
-              <DockIcon
-                to="/wishlist"
-                title="Wishlist"
-                badge={wishlist.length}
-                badgeColor="bg-accent"
-              >
+              <DockIcon to="/wishlist" title="Wishlist">
                 <Heart size={18} />
               </DockIcon>
 
