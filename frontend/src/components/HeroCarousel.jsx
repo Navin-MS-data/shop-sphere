@@ -71,7 +71,7 @@ const HeroCarousel = () => {
   };
 
   return (
-    <div className="relative w-full h-[400px] md:h-[500px] overflow-hidden">
+    <div className="relative w-full h-[85vh] overflow-hidden">
       {/* Slides */}
       {slides.map((slide, index) => (
         <div
@@ -108,9 +108,9 @@ const HeroCarousel = () => {
               </p>
               <button
                 onClick={() => navigate(slide.buttonLink)}
-                className="bg-white text-black px-8 py-4 rounded-full text-lg font-semibold
-                         hover:bg-black hover:text-white transform hover:scale-105
-                         transition-all duration-300 shadow-2xl hover:shadow-black/50"
+                className="bg-white text-primary px-8 py-4 rounded-full text-lg font-semibold
+                         hover:bg-primary hover:text-white transform hover:scale-105
+                         transition-all duration-300 shadow-2xl hover:shadow-primary/30"
               >
                 {slide.buttonText}
               </button>

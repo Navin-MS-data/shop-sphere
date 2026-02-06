@@ -3,25 +3,25 @@ import { ShoppingBag, Heart, Leaf, Users, Award, TrendingUp } from "lucide-react
 const AboutPage = () => {
   const values = [
     {
-      icon: <Leaf className="w-12 h-12 text-green-600" />,
+      icon: <Leaf className="w-12 h-12 text-secondary" />,
       title: "Sustainability",
       description:
         "We're committed to eco-friendly fashion that doesn't harm our planet. Every product is carefully sourced with sustainability in mind.",
     },
     {
-      icon: <Heart className="w-12 h-12 text-red-600" />,
+      icon: <Heart className="w-12 h-12 text-destructive-light" />,
       title: "Quality First",
       description:
         "We believe in quality over quantity. Our products are built to last, reducing waste and ensuring customer satisfaction.",
     },
     {
-      icon: <Users className="w-12 h-12 text-blue-600" />,
+      icon: <Users className="w-12 h-12 text-primary" />,
       title: "Customer Focused",
       description:
         "Your satisfaction is our priority. We provide exceptional service and support to make your shopping experience memorable.",
     },
     {
-      icon: <Award className="w-12 h-12 text-yellow-600" />,
+      icon: <Award className="w-12 h-12 text-accent" />,
       title: "Excellence",
       description:
         "We strive for excellence in everything we do, from product selection to customer service and delivery.",
@@ -57,13 +57,13 @@ const AboutPage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-gray-900 to-gray-800 text-white py-20">
+      <div className="bg-gradient-to-r from-grey-900 to-grey-800 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-5xl md:text-6xl font-bold mb-6">About Shop Sphere</h1>
-            <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl text-grey-300 max-w-3xl mx-auto">
               Your premier destination for eco-friendly fashion. We believe style and sustainability
               can coexist beautifully.
             </p>
@@ -75,8 +75,8 @@ const AboutPage = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Story</h2>
-            <div className="space-y-4 text-gray-600">
+            <h2 className="text-4xl font-bold text-grey-900 mb-6">Our Story</h2>
+            <div className="space-y-4 text-grey-500">
               <p>
                 Founded in 2020, Shop Sphere started with a simple mission: to make sustainable
                 fashion accessible to everyone. We noticed a gap in the market for stylish,
@@ -95,10 +95,10 @@ const AboutPage = () => {
             </div>
           </div>
           <div className="relative">
-            <div className="bg-gray-100 rounded-2xl p-8 text-gray-900 shadow-2xl border border-gray-200">
-              <ShoppingBag className="w-20 h-20 mb-6 text-gray-700" />
+            <div className="bg-white rounded-2xl p-8 text-grey-900 shadow-2xl border border-grey-200">
+              <ShoppingBag className="w-20 h-20 mb-6 text-primary" />
               <h3 className="text-3xl font-bold mb-4">Our Mission</h3>
-              <p className="text-lg text-gray-600">
+              <p className="text-lg text-grey-500">
                 To revolutionize the fashion industry by proving that style, quality, and
                 sustainability can go hand in hand. We're building a future where conscious
                 consumption is the norm, not the exception.
@@ -109,15 +109,15 @@ const AboutPage = () => {
       </div>
 
       {/* Stats Section */}
-      <div className="bg-gray-100 py-16">
+      <div className="bg-grey-100 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="text-4xl md:text-5xl font-bold text-gray-900 mb-2">
+                <div className="text-4xl md:text-5xl font-bold text-primary mb-2">
                   {stat.number}
                 </div>
-                <div className="text-gray-600 font-medium">{stat.label}</div>
+                <div className="text-grey-500 font-medium">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -127,8 +127,8 @@ const AboutPage = () => {
       {/* Values Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Core Values</h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <h2 className="text-4xl font-bold text-grey-900 mb-4">Our Core Values</h2>
+          <p className="text-xl text-grey-500 max-w-2xl mx-auto">
             These principles guide everything we do and shape the way we serve our customers.
           </p>
         </div>
@@ -136,43 +136,43 @@ const AboutPage = () => {
           {values.map((value, index) => (
             <div
               key={index}
-              className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-200"
+              className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-grey-200"
             >
               <div className="flex justify-center mb-4">{value.icon}</div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3 text-center">{value.title}</h3>
-              <p className="text-gray-600 text-center text-sm">{value.description}</p>
+              <h3 className="text-xl font-bold text-grey-900 mb-3 text-center">{value.title}</h3>
+              <p className="text-grey-500 text-center text-sm">{value.description}</p>
             </div>
           ))}
         </div>
       </div>
 
       {/* Why Choose Us Section */}
-      <div className="bg-gradient-to-r from-blue-50 to-purple-50 py-16">
+      <div className="bg-gradient-to-r from-primary-50 to-secondary-50 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Choose Shop Sphere?</h2>
+            <h2 className="text-4xl font-bold text-grey-900 mb-4">Why Choose Shop Sphere?</h2>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white p-6 rounded-xl shadow-md">
-              <TrendingUp className="w-10 h-10 text-blue-600 mb-4" />
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Latest Trends</h3>
-              <p className="text-gray-600">
+            <div className="bg-white p-6 rounded-xl shadow-md border border-grey-200">
+              <TrendingUp className="w-10 h-10 text-primary mb-4" />
+              <h3 className="text-xl font-bold text-grey-900 mb-3">Latest Trends</h3>
+              <p className="text-grey-500">
                 Stay ahead with our curated collection of the latest fashion trends, updated
                 regularly to keep your wardrobe fresh.
               </p>
             </div>
-            <div className="bg-white p-6 rounded-xl shadow-md">
-              <Leaf className="w-10 h-10 text-green-600 mb-4" />
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Eco-Friendly</h3>
-              <p className="text-gray-600">
+            <div className="bg-white p-6 rounded-xl shadow-md border border-grey-200">
+              <Leaf className="w-10 h-10 text-secondary mb-4" />
+              <h3 className="text-xl font-bold text-grey-900 mb-3">Eco-Friendly</h3>
+              <p className="text-grey-500">
                 Every product is carefully selected to meet our sustainability standards, ensuring
                 minimal environmental impact.
               </p>
             </div>
-            <div className="bg-white p-6 rounded-xl shadow-md">
-              <Award className="w-10 h-10 text-yellow-600 mb-4" />
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Premium Quality</h3>
-              <p className="text-gray-600">
+            <div className="bg-white p-6 rounded-xl shadow-md border border-grey-200">
+              <Award className="w-10 h-10 text-accent mb-4" />
+              <h3 className="text-xl font-bold text-grey-900 mb-3">Premium Quality</h3>
+              <p className="text-grey-500">
                 We never compromise on quality. Each item undergoes rigorous quality checks before
                 reaching you.
               </p>
@@ -182,16 +182,16 @@ const AboutPage = () => {
       </div>
 
       {/* CTA Section */}
-      <div className="bg-gray-100 text-gray-900 py-16">
+      <div className="bg-grey-100 text-grey-900 py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold mb-6">Join Our Sustainable Fashion Movement</h2>
-          <p className="text-xl text-gray-600 mb-8">
+          <p className="text-xl text-grey-500 mb-8">
             Be part of the change. Shop consciously, look great, and make a positive impact on our
             planet.
           </p>
           <button
             onClick={() => (window.location.href = "/")}
-            className="bg-gray-900 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-800 transition-colors duration-300 shadow-lg hover:shadow-xl"
+            className="bg-primary text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-primary-dark transition-colors duration-300 shadow-lg hover:shadow-xl"
           >
             Start Shopping
           </button>

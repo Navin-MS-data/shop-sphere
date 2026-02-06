@@ -9,51 +9,51 @@ const ProductsList = () => {
 
   return (
     <motion.div
-      className="bg-white shadow-lg rounded-lg overflow-hidden max-w-4xl mx-auto border border-grey-300"
+      className="bg-white shadow-lg rounded-lg overflow-hidden max-w-4xl mx-auto border border-grey-200"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
     >
-      <table className=" min-w-full divide-y divide-grey-300">
-        <thead className="bg-grey-100">
+      <table className=" min-w-full divide-y divide-grey-200">
+        <thead className="bg-grey-50">
           <tr>
             <th
               scope="col"
-              className="px-6 py-3 text-left text-xs font-medium text-black uppercase tracking-wider"
+              className="px-6 py-3 text-left text-xs font-medium text-grey-600 uppercase tracking-wider"
             >
               Product
             </th>
             <th
               scope="col"
-              className="px-6 py-3 text-left text-xs font-medium text-black uppercase tracking-wider"
+              className="px-6 py-3 text-left text-xs font-medium text-grey-600 uppercase tracking-wider"
             >
               Price
             </th>
             <th
               scope="col"
-              className="px-6 py-3 text-left text-xs font-medium text-black uppercase tracking-wider"
+              className="px-6 py-3 text-left text-xs font-medium text-grey-600 uppercase tracking-wider"
             >
               Category
             </th>
 
             <th
               scope="col"
-              className="px-6 py-3 text-left text-xs font-medium text-black uppercase tracking-wider"
+              className="px-6 py-3 text-left text-xs font-medium text-grey-600 uppercase tracking-wider"
             >
               Featured
             </th>
             <th
               scope="col"
-              className="px-6 py-3 text-left text-xs font-medium text-black uppercase tracking-wider"
+              className="px-6 py-3 text-left text-xs font-medium text-grey-600 uppercase tracking-wider"
             >
               Actions
             </th>
           </tr>
         </thead>
 
-        <tbody className="bg-white divide-y divide-grey-300">
+        <tbody className="bg-white divide-y divide-grey-200">
           {products?.map((product) => (
-            <tr key={product._id} className="hover:bg-grey-50">
+            <tr key={product._id} className="hover:bg-grey-50 transition-colors duration-150">
               <td className="px-6 py-4 whitespace-nowrap">
                 <div className="flex items-center">
                   <div className="flex-shrink-0 h-10 w-10">
@@ -64,7 +64,7 @@ const ProductsList = () => {
                     />
                   </div>
                   <div className="ml-4">
-                    <div className="text-sm font-medium text-black">{product.name}</div>
+                    <div className="text-sm font-medium text-grey-900">{product.name}</div>
                   </div>
                 </div>
               </td>
@@ -78,8 +78,8 @@ const ProductsList = () => {
                 <button
                   onClick={() => toggleFeaturedProduct(product._id)}
                   className={`p-1 rounded-full ${
-                    product.isFeatured ? "bg-black text-white" : "bg-grey-300 text-grey-600"
-                  } hover:bg-grey-800 hover:text-white transition-colors duration-200`}
+                    product.isFeatured ? "bg-accent text-white" : "bg-grey-200 text-grey-500"
+                  } hover:bg-accent-dark hover:text-white transition-colors duration-200`}
                 >
                   <Star className="h-5 w-5" />
                 </button>
@@ -87,7 +87,7 @@ const ProductsList = () => {
               <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
                 <button
                   onClick={() => deleteProduct(product._id)}
-                  className="text-grey-600 hover:text-black"
+                  className="text-grey-500 hover:text-destructive transition-colors duration-200"
                 >
                   <Trash className="h-5 w-5" />
                 </button>

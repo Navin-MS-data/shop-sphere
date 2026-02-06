@@ -22,16 +22,14 @@ const HomePage = () => {
   }, [fetchFeaturedProducts]);
 
   return (
-    <div className="relative min-h-screen text-black overflow-hidden">
-      <div className="pt-[76px]">
-        <HeroCarousel />
-      </div>
+    <div className="relative min-h-screen text-grey-900 overflow-hidden">
+      <HeroCarousel />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <h1 className="text-center text-5xl sm:text-6xl font-bold text-black mb-4">
+        <h1 className="text-center text-5xl sm:text-6xl font-bold text-grey-900 mb-4">
           Explore Our Categories
         </h1>
-        <p className="text-center text-xl text-grey-600 mb-12">
+        <p className="text-center text-xl text-grey-500 mb-12">
           Discover the latest trends in eco-friendly fashion
         </p>
 

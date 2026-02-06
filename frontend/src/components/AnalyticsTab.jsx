@@ -40,7 +40,7 @@ const AnalyticsTab = () => {
   }, []);
 
   if (isLoading) {
-    return <div>Loading...</div>;
+    return <div className="text-grey-900">Loading...</div>;
   }
 
   return (
@@ -50,46 +50,46 @@ const AnalyticsTab = () => {
           title="Total Users"
           value={analyticsData.users.toLocaleString()}
           icon={Users}
-          color="from-grey-800 to-black"
+          color="from-primary-400 to-primary-700"
         />
         <AnalyticsCard
           title="Total Products"
           value={analyticsData.products.toLocaleString()}
           icon={Package}
-          color="from-grey-700 to-grey-900"
+          color="from-secondary-400 to-secondary-700"
         />
         <AnalyticsCard
           title="Total Sales"
           value={analyticsData.totalSales.toLocaleString()}
           icon={ShoppingCart}
-          color="from-grey-600 to-black"
+          color="from-accent-400 to-accent-700"
         />
         <AnalyticsCard
           title="Total Revenue"
           value={`$${analyticsData.totalRevenue.toLocaleString()}`}
           icon={DollarSign}
-          color="from-black to-grey-800"
+          color="from-primary-600 to-secondary-700"
         />
       </div>
       <motion.div
-        className="bg-white rounded-lg p-6 shadow-lg border border-grey-300"
+        className="bg-white rounded-lg p-6 shadow-lg border border-grey-200"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.25 }}
       >
         <ResponsiveContainer width="100%" height={400}>
           <LineChart data={dailySalesData}>
-            <CartesianGrid strokeDasharray="3 3" stroke="#E0E0E0" />
-            <XAxis dataKey="name" stroke="#424242" />
-            <YAxis yAxisId="left" stroke="#424242" />
-            <YAxis yAxisId="right" orientation="right" stroke="#424242" />
+            <CartesianGrid strokeDasharray="3 3" stroke="#E2E8F0" />
+            <XAxis dataKey="name" stroke="#475569" />
+            <YAxis yAxisId="left" stroke="#475569" />
+            <YAxis yAxisId="right" orientation="right" stroke="#475569" />
             <Tooltip />
             <Legend />
             <Line
               yAxisId="left"
               type="monotone"
               dataKey="sales"
-              stroke="#000000"
+              stroke="#6366F1"
               activeDot={{ r: 8 }}
               name="Sales"
             />
@@ -97,7 +97,7 @@ const AnalyticsTab = () => {
               yAxisId="right"
               type="monotone"
               dataKey="revenue"
-              stroke="#757575"
+              stroke="#0D9488"
               activeDot={{ r: 8 }}
               name="Revenue"
             />
@@ -111,15 +111,15 @@ export default AnalyticsTab;
 
 const AnalyticsCard = ({ title, value, icon: Icon, color }) => (
   <motion.div
-    className={`bg-white rounded-lg p-6 shadow-lg overflow-hidden relative border border-grey-300`}
+    className={`bg-white rounded-lg p-6 shadow-lg overflow-hidden relative border border-grey-200`}
     initial={{ opacity: 0, y: 20 }}
     animate={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.5 }}
   >
     <div className="flex justify-between items-center">
       <div className="z-10">
-        <p className="text-grey-600 text-sm mb-1 font-semibold">{title}</p>
-        <h3 className="text-black text-3xl font-bold">{value}</h3>
+        <p className="text-grey-500 text-sm mb-1 font-semibold">{title}</p>
+        <h3 className="text-grey-900 text-3xl font-bold">{value}</h3>
       </div>
     </div>
     <div className={`absolute inset-0 bg-gradient-to-br ${color} opacity-5`} />

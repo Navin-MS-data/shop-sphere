@@ -24,7 +24,7 @@ const LoginPage = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        <h2 className="mt-6 text-center text-3xl font-extrabold text-black">
+        <h2 className="mt-6 text-center text-3xl font-extrabold text-grey-900">
           Sign in to your account
         </h2>
       </motion.div>
@@ -38,12 +38,12 @@ const LoginPage = () => {
         <div className="bg-white py-8 px-4 shadow-md sm:rounded-lg sm:px-10 border border-grey-300">
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-black">
+              <label htmlFor="email" className="block text-sm font-medium text-grey-800">
                 Email address
               </label>
               <div className="mt-1 relative rounded-md shadow-sm">
                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                  <Mail className="h-5 w-5 text-grey-600" aria-hidden="true" />
+                  <Mail className="h-5 w-5 text-grey-400" aria-hidden="true" />
                 </div>
                 <input
                   id="email"
@@ -53,20 +53,20 @@ const LoginPage = () => {
                   onChange={(e) => setEmail(e.target.value)}
                   className="block w-full px-3 py-2 pl-10 bg-white border border-grey-300
                   rounded-md shadow-sm
-                   placeholder-grey-400 focus:outline-none focus:ring-2 focus:ring-black
-                   focus:border-black sm:text-sm text-black"
+                   placeholder-grey-400 focus:outline-none focus:ring-2 focus:ring-primary
+                   focus:border-primary sm:text-sm text-grey-900"
                   placeholder="you@example.com"
                 />
               </div>
             </div>
 
             <div>
-              <label htmlFor="password" className="block text-sm font-medium text-black">
+              <label htmlFor="password" className="block text-sm font-medium text-grey-800">
                 Password
               </label>
               <div className="mt-1 relative rounded-md shadow-sm">
                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                  <Lock className="h-5 w-5 text-grey-600" aria-hidden="true" />
+                  <Lock className="h-5 w-5 text-grey-400" aria-hidden="true" />
                 </div>
                 <input
                   id="password"
@@ -75,7 +75,7 @@ const LoginPage = () => {
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   className="block w-full px-3 py-2 pl-10 bg-white border border-grey-300
-                  rounded-md shadow-sm placeholder-grey-400 focus:outline-none focus:ring-2 focus:ring-black focus:border-black sm:text-sm text-black"
+                  rounded-md shadow-sm placeholder-grey-400 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary sm:text-sm text-grey-900"
                   placeholder="••••••••"
                 />
               </div>
@@ -84,9 +84,9 @@ const LoginPage = () => {
             <button
               type="submit"
               className="w-full flex justify-center py-2 px-4 border border-transparent
-              rounded-md shadow-md text-sm font-medium text-white bg-black
-               hover:bg-grey-800 focus:outline-none focus:ring-2 focus:ring-offset-2
-                focus:ring-grey-400 transition duration-150 ease-in-out disabled:opacity-50 hover:shadow-lg"
+              rounded-md shadow-md text-sm font-medium text-white bg-primary
+               hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-offset-2
+                focus:ring-primary transition duration-150 ease-in-out disabled:opacity-50 hover:shadow-lg"
               disabled={loading}
             >
               {loading ? (
@@ -103,9 +103,12 @@ const LoginPage = () => {
             </button>
           </form>
 
-          <p className="mt-8 text-center text-sm text-grey-600">
+          <p className="mt-8 text-center text-sm text-grey-500">
             Not a member?{" "}
-            <Link to="/signup" className="font-medium text-black hover:text-grey-700 underline">
+            <Link
+              to="/signup"
+              className="font-medium text-primary hover:text-primary-dark underline"
+            >
               Sign up now <ArrowRight className="inline h-4 w-4" />
             </Link>
           </p>

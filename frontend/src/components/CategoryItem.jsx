@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const CategoryItem = ({ category }) => {
   return (
-    <div className="relative overflow-hidden h-96 w-full rounded-lg group shadow-md hover:shadow-lg transition-shadow duration-300 border border-grey-300">
+    <div className="relative overflow-hidden h-96 w-full rounded-lg group shadow-md hover:shadow-lg transition-shadow duration-300 border border-grey-200">
       <Link to={"/category" + category.href}>
         <div className="w-full h-full cursor-pointer">
           <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-30 z-10" />
@@ -13,8 +13,8 @@ const CategoryItem = ({ category }) => {
             loading="lazy"
           />
           <div className="absolute bottom-0 left-0 right-0 p-4 z-20 bg-white bg-opacity-90 backdrop-blur-sm">
-            <h3 className="text-black text-2xl font-bold mb-2">{category.name}</h3>
-            <p className="text-grey-600 text-sm">Explore {category.name}</p>
+            <h3 className="text-grey-900 text-2xl font-bold mb-2">{category.name}</h3>
+            <p className="text-grey-500 text-sm">Explore {category.name}</p>
           </div>
         </div>
       </Link>

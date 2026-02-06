@@ -1,6 +1,7 @@
 import { Navigate, Route, Routes } from "react-router-dom";
 
 import HomePage from "./pages/HomePage";
+import ScrollToTop from "./components/ScrollToTop";
 import SignUpPage from "./pages/SignUpPage";
 import LoginPage from "./pages/LoginPage";
 import AdminPage from "./pages/AdminPage";
@@ -43,11 +44,12 @@ function App() {
       {/* Background gradient */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute inset-0">
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(ellipse_at_top,rgba(245,245,245,0.8)_0%,rgba(255,255,255,0.5)_45%,rgba(255,255,255,0)_100%)]" />
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(ellipse_at_top,rgba(99,102,241,0.08)_0%,rgba(255,251,247,0.5)_45%,rgba(255,251,247,0)_100%)]" />
         </div>
       </div>
 
       <div className="relative z-50">
+        <ScrollToTop />
         <Navbar />
         <Routes>
           <Route path="/" element={<HomePage />} />

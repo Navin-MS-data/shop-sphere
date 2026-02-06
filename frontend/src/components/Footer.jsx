@@ -29,7 +29,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-gray-900 text-white mt-auto">
+    <footer className="bg-grey-900 text-white mt-auto">
       <div className="max-w-7xl mx-auto px-4 py-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {/* Company Info */}
@@ -38,7 +38,7 @@ const Footer = () => {
               <img src="/shop-sphere-icon.svg" alt="Shop Sphere Logo" className="w-7 h-7" />
               <h3 className="text-lg font-bold">Shop Sphere</h3>
             </div>
-            <p className="text-gray-400 mb-3 text-xs leading-relaxed">
+            <p className="text-grey-400 mb-3 text-xs leading-relaxed">
               Your premier destination for eco-friendly fashion. Discover the latest trends in
               sustainable style.
             </p>
@@ -47,7 +47,7 @@ const Footer = () => {
                 href="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-colors duration-200"
+                className="text-grey-400 hover:text-white transition-colors duration-200"
                 aria-label="Facebook"
               >
                 <Facebook size={18} />
@@ -56,7 +56,7 @@ const Footer = () => {
                 href="https://twitter.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-colors duration-200"
+                className="text-grey-400 hover:text-white transition-colors duration-200"
                 aria-label="Twitter"
               >
                 <Twitter size={18} />
@@ -65,7 +65,7 @@ const Footer = () => {
                 href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-colors duration-200"
+                className="text-grey-400 hover:text-white transition-colors duration-200"
                 aria-label="Instagram"
               >
                 <Instagram size={18} />
@@ -74,7 +74,7 @@ const Footer = () => {
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-colors duration-200"
+                className="text-grey-400 hover:text-white transition-colors duration-200"
                 aria-label="LinkedIn"
               >
                 <Linkedin size={18} />
@@ -89,7 +89,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/category/jeans"
-                  className="text-gray-400 hover:text-white transition-colors duration-200 text-xs"
+                  className="text-grey-400 hover:text-white transition-colors duration-200 text-xs"
                 >
                   Jeans
                 </Link>
@@ -97,7 +97,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/category/t-shirts"
-                  className="text-gray-400 hover:text-white transition-colors duration-200 text-xs"
+                  className="text-grey-400 hover:text-white transition-colors duration-200 text-xs"
                 >
                   T-Shirts
                 </Link>
@@ -105,7 +105,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/category/shoes"
-                  className="text-gray-400 hover:text-white transition-colors duration-200 text-xs"
+                  className="text-grey-400 hover:text-white transition-colors duration-200 text-xs"
                 >
                   Shoes
                 </Link>
@@ -113,7 +113,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/category/jackets"
-                  className="text-gray-400 hover:text-white transition-colors duration-200 text-xs"
+                  className="text-grey-400 hover:text-white transition-colors duration-200 text-xs"
                 >
                   Jackets
                 </Link>
@@ -121,7 +121,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/category/bags"
-                  className="text-gray-400 hover:text-white transition-colors duration-200 text-xs"
+                  className="text-grey-400 hover:text-white transition-colors duration-200 text-xs"
                 >
                   Bags
                 </Link>
@@ -129,7 +129,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/category/glasses"
-                  className="text-gray-400 hover:text-white transition-colors duration-200 text-xs"
+                  className="text-grey-400 hover:text-white transition-colors duration-200 text-xs"
                 >
                   Glasses
                 </Link>
@@ -137,7 +137,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/category/suits"
-                  className="text-gray-400 hover:text-white transition-colors duration-200 text-xs"
+                  className="text-grey-400 hover:text-white transition-colors duration-200 text-xs"
                 >
                   Suits
                 </Link>
@@ -152,7 +152,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/"
-                  className="text-gray-400 hover:text-white transition-colors duration-200 text-xs"
+                  className="text-grey-400 hover:text-white transition-colors duration-200 text-xs"
                 >
                   Home
                 </Link>
@@ -160,7 +160,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/cart"
-                  className="text-gray-400 hover:text-white transition-colors duration-200 text-xs"
+                  className="text-grey-400 hover:text-white transition-colors duration-200 text-xs"
                 >
                   Shopping Cart
                 </Link>
@@ -168,7 +168,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/wishlist"
-                  className="text-gray-400 hover:text-white transition-colors duration-200 text-xs"
+                  className="text-grey-400 hover:text-white transition-colors duration-200 text-xs"
                 >
                   Wishlist
                 </Link>
@@ -176,7 +176,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/about"
-                  className="text-gray-400 hover:text-white transition-colors duration-200 text-xs"
+                  className="text-grey-400 hover:text-white transition-colors duration-200 text-xs"
                 >
                   About Us
                 </Link>
@@ -185,7 +185,7 @@ const Footer = () => {
               <li>
                 <a
                   href="#"
-                  className="text-gray-400 hover:text-white transition-colors duration-200 text-xs"
+                  className="text-grey-400 hover:text-white transition-colors duration-200 text-xs"
                 >
                   Returns & Exchange
                 </a>
@@ -193,7 +193,7 @@ const Footer = () => {
               <li>
                 <a
                   href="#"
-                  className="text-gray-400 hover:text-white transition-colors duration-200 text-xs"
+                  className="text-grey-400 hover:text-white transition-colors duration-200 text-xs"
                 >
                   FAQs
                 </a>
@@ -205,11 +205,11 @@ const Footer = () => {
           <div>
             <h3 className="text-base font-semibold mb-3">Get In Touch</h3>
             <ul className="space-y-2 mb-4">
-              <li className="flex items-start gap-2 text-gray-400 text-xs">
+              <li className="flex items-start gap-2 text-grey-400 text-xs">
                 <MapPin size={16} className="flex-shrink-0 mt-0.5" />
                 <span>123 Fashion Street, Style City, SC 12345</span>
               </li>
-              <li className="flex items-center gap-2 text-gray-400 text-xs">
+              <li className="flex items-center gap-2 text-grey-400 text-xs">
                 <Phone size={16} className="flex-shrink-0" />
                 <a
                   href="tel:+1234567890"
@@ -218,7 +218,7 @@ const Footer = () => {
                   +1 (234) 567-890
                 </a>
               </li>
-              <li className="flex items-center gap-2 text-gray-400 text-xs">
+              <li className="flex items-center gap-2 text-grey-400 text-xs">
                 <Mail size={16} className="flex-shrink-0" />
                 <a
                   href="mailto:info@shopsphere.com"
@@ -233,7 +233,7 @@ const Footer = () => {
               <h4 className="text-xs font-semibold mb-2">Our Stores</h4>
               <div className="grid grid-cols-2 gap-x-4 gap-y-2">
                 {stores.map((store, index) => (
-                  <span key={index} className="text-gray-400 text-[10px]">
+                  <span key={index} className="text-grey-400 text-[10px]">
                     • {store}
                   </span>
                 ))}
@@ -243,22 +243,22 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-gray-800 mt-6 pt-4">
+        <div className="border-t border-grey-800 mt-6 pt-4">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-gray-400 text-xs text-center md:text-left">
+            <p className="text-grey-400 text-xs text-center md:text-left">
               © {currentYear} Shop Sphere. All rights reserved.
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-xs">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors duration-200">
+              <a href="#" className="text-grey-400 hover:text-white transition-colors duration-200">
                 Privacy Policy
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors duration-200">
+              <a href="#" className="text-grey-400 hover:text-white transition-colors duration-200">
                 Terms of Service
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors duration-200">
+              <a href="#" className="text-grey-400 hover:text-white transition-colors duration-200">
                 Cookie Policy
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors duration-200">
+              <a href="#" className="text-grey-400 hover:text-white transition-colors duration-200">
                 Shipping Policy
               </a>
             </div>
@@ -270,7 +270,7 @@ const Footer = () => {
       {showBackToTop && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-6 right-6 bg-black hover:bg-gray-800 text-white p-2.5 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-50 group"
+          className="fixed bottom-6 right-6 bg-primary hover:bg-primary-dark text-white p-2.5 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-50 group"
           aria-label="Back to top"
         >
           <ArrowUp

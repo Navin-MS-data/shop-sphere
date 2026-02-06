@@ -16,43 +16,39 @@ const CartItem = ({ item }) => {
           <div className="flex items-center gap-2">
             <button
               className="inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-md border
-               border-grey-300 bg-white hover:bg-black hover:text-white hover:border-black focus:outline-none focus:ring-2
-                focus:ring-grey-400 transition-all duration-200"
+               border-grey-300 bg-white hover:bg-primary hover:text-white hover:border-primary focus:outline-none focus:ring-2
+                focus:ring-primary-200 transition-all duration-200"
               onClick={() => updateQuantity(item._id, item.quantity - 1)}
             >
               <Minus className="text-grey-600" size={14} />
             </button>
-            <p className="text-black font-medium">{item.quantity}</p>
+            <p className="text-grey-900 font-medium">{item.quantity}</p>
             <button
               className="inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-md border
-               border-grey-300 bg-white hover:bg-black hover:text-white hover:border-black focus:outline-none
-              focus:ring-2 focus:ring-grey-400 transition-all duration-200"
+               border-grey-300 bg-white hover:bg-primary hover:text-white hover:border-primary focus:outline-none
+              focus:ring-2 focus:ring-primary-200 transition-all duration-200"
               onClick={() => updateQuantity(item._id, item.quantity + 1)}
             >
               <Plus className="text-grey-600" size={14} />
             </button>
-          </div>
-
-          <div className="text-end md:order-4 md:w-32">
-            <p className="text-base font-bold text-black">${item.price}</p>
-          </div>
-        </div>
-
-        <div className="w-full min-w-0 flex-1 space-y-4 md:order-2 md:max-w-md">
-          <p className="text-base font-medium text-black hover:text-grey-700 hover:underline">
-            {item.name}
-          </p>
-          <p className="text-sm text-grey-600">{item.description}</p>
-
-          <div className="flex items-center gap-4">
             <button
-              className="inline-flex items-center text-sm font-medium text-red-400
-               hover:text-red-500 hover:underline"
+              className="inline-flex items-center ml-6 text-grey-500
+               hover:text-destructive transition-all duration-200"
               onClick={() => removeFromCart(item._id)}
             >
               <Trash size={16} />
             </button>
           </div>
+
+          <div className="text-end md:order-4 md:w-32">
+            <p className="text-base font-bold text-grey-900">${item.price}</p>
+          </div>
+        </div>
+
+        <div className="w-full min-w-0 flex-1 space-y-4 md:order-2 md:max-w-md">
+          <p className="text-base font-medium text-grey-900 hover:text-primary hover:underline">
+            {item.name}
+          </p>
         </div>
       </div>
     </div>
