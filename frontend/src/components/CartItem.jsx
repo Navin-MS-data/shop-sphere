@@ -17,7 +17,7 @@ const CartItem = ({ item }) => {
           />
           <div className="flex-1 min-w-0">
             <p className="text-base font-medium text-grey-900 line-clamp-2">{item.name}</p>
-            <p className="text-lg font-bold text-grey-900 mt-2">${item.price}</p>
+            <p className="text-lg font-bold text-grey-900 mt-2">₹{item.price}</p>
           </div>
         </div>
 
@@ -96,7 +96,7 @@ const CartItem = ({ item }) => {
           </button>
 
           <div className="text-end md:w-32">
-            <p className="text-base font-bold text-grey-900">${item.price}</p>
+            <p className="text-base font-bold text-grey-900">₹{item.price}</p>
           </div>
         </div>
       </div>

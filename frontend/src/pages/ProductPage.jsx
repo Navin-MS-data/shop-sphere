@@ -176,7 +176,7 @@ const ProductPage = () => {
 
             {/* Price */}
             <div className="mb-6">
-              <span className="text-4xl font-bold text-grey-900">${product.price}</span>
+              <span className="text-4xl font-bold text-grey-900">₹{product.price}</span>
               <span className="text-grey-500 ml-2">USD</span>
             </div>
 

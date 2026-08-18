@@ -86,7 +86,7 @@ const WishlistPage = () => {
                     {product.description}
                   </p>
                   <div className="flex items-center justify-between mb-4">
-                    <span className="text-2xl font-bold text-grey-900">${product.price}</span>
+                    <span className="text-2xl font-bold text-grey-900">₹{product.price}</span>
                     <span className="text-sm text-grey-500 capitalize">{product.category}</span>
                   </div>
 

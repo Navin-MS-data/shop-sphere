@@ -47,13 +47,13 @@ const OrderSummary = () => {
         <div className="space-y-2">
           <dl className="flex items-center justify-between gap-4">
             <dt className="text-base font-normal text-grey-500">Original price</dt>
-            <dd className="text-base font-medium text-grey-900">${formattedSubtotal}</dd>
+            <dd className="text-base font-medium text-grey-900">₹{formattedSubtotal}</dd>
           </dl>
 
           {savings > 0 && (
             <dl className="flex items-center justify-between gap-4">
               <dt className="text-base font-normal text-grey-500">Savings</dt>
-              <dd className="text-base font-medium text-secondary">-${formattedSavings}</dd>
+              <dd className="text-base font-medium text-secondary">-₹{formattedSavings}</dd>
             </dl>
           )}
 
@@ -67,7 +67,7 @@ const OrderSummary = () => {
           )}
           <dl className="flex items-center justify-between gap-4 border-t border-grey-200 pt-2">
             <dt className="text-base font-bold text-grey-900">Total</dt>
-            <dd className="text-base font-bold text-grey-900">${formattedTotal}</dd>
+            <dd className="text-base font-bold text-grey-900">₹{formattedTotal}</dd>
           </dl>
         </div>
 
